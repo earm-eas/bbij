@@ -1,0 +1,11 @@
+# Build the whole Typst project to out/baekbeom.pdf.
+pdf:
+    typst compile main.typ out/baekbeom.pdf --font-path fonts
+
+# Recompile on every change.
+watch:
+    typst watch main.typ out/baekbeom.pdf --font-path fonts
+
+# Preview with typst's built-in viewer.
+preview:
+    typst watch main.typ --font-path fonts --open
